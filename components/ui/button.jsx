@@ -1,6 +1,10 @@
-export function Button({ children, ...props }) {
+export function Button({ children, className = "", asChild = false, ...props }) {
+  if (asChild && children) {
+    return children;
+  }
+
   return (
-    <button {...props} className="px-4 py-2 rounded bg-black text-white">
+    <button {...props} className={className}>
       {children}
     </button>
   );
