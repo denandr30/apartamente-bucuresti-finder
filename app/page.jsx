@@ -1,3 +1,5 @@
+"use client";
+
 import { useMemo, useState } from "react";
 import { Home, MapPin, Train, Bath, Ruler, Calendar, Building2, Heart, Search, X, Map, Bell, CheckCircle2, Shield, Layers3 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
