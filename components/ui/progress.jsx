@@ -1,9 +1,14 @@
-export function Progress({ value }) {
+export function Progress({ value = 0, className = "", indicatorClassName = "" }) {
   return (
-    <div className="w-full bg-gray-200 rounded h-2">
+    <div className={className} style={{ background: "#e5e7eb", borderRadius: 9999, overflow: "hidden" }}>
       <div
-        className="bg-green-500 h-2 rounded"
-        style={{ width: value + "%" }}
+        className={indicatorClassName}
+        style={{
+          width: `${value}%`,
+          height: "100%",
+          background: "#10b981",
+          borderRadius: 9999,
+        }}
       />
     </div>
   );
